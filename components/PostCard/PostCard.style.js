@@ -1,12 +1,17 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../assets/fonts/helper';
+import {
+  horizontalScale,
+  scaleFontSize,
+  verticalScale,
+} from '../../utils/scaling';
 
 export const PostCardStyles = StyleSheet.create({
   postContainer: {
-    paddingVertical: 23,
+    paddingVertical: verticalScale(23),
     borderBottomWidth: 0.5,
     borderBottomColor: '#EFF2F6',
-    rowGap: 20,
+    rowGap: verticalScale(20),
     flex: 1,
   },
   //Header Styles
@@ -20,7 +25,7 @@ export const PostCardStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 10,
+    gap: horizontalScale(10),
   },
   imageContainer: {
     height: 48,
@@ -29,11 +34,11 @@ export const PostCardStyles = StyleSheet.create({
   userName: {
     color: '#000',
     fontFamily: getFontFamily('Inter', '500'),
-    fontSize: 16,
+    fontSize: scaleFontSize(16),
     letterSpacing: 0.16,
   },
   location: {
-    marginTop: 5,
+    marginTop: verticalScale(5),
     color: '#79869F',
     fontFamily: getFontFamily('Inter', '400'),
     letterSpacing: 0.12,
@@ -44,17 +49,17 @@ export const PostCardStyles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
-    gap: 27,
+    gap: horizontalScale(27),
   },
   iconContainer: {
     display: 'flex',
-    gap: 5,
+    gap: verticalScale(5),
     flexDirection: 'row',
     alignItems: 'center',
   },
   countText: {
     color: '#79869F',
-    fontSize: 14,
+    fontSize: scaleFontSize(14),
     fontFamily: getFontFamily('Inter', '500'),
   },
 });

@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {getFontFamily} from '../../assets/fonts/helper';
+import {horizontalScale, verticalScale} from '../../utils/scaling';
 
 export const HeaderStyles = StyleSheet.create({
   headerContainer: {
@@ -10,7 +11,8 @@ export const HeaderStyles = StyleSheet.create({
   },
   iconContainer: {
     backgroundColor: '#F9FAFB',
-    padding: 14,
+    paddingHorizontal: horizontalScale(14),
+    paddingVertical: verticalScale(14),
     borderRadius: 100,
     position: 'relative',
   },
